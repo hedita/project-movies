@@ -1,11 +1,12 @@
-:root {  
-    --spacing: 8px;
-    --spacing-xsmall: calc(var(--spacing));
-    --spacing-small: calc(var(--spacing) * 2);
-    --spacing-large: calc(var(--spacing) * 3);
-    --spacing-xlarge: calc(var(--spacing) * 4);
+:root { 
+  --primary-font: "roboto"; 
+  --spacing: 8px;
+  --spacing-xsmall: calc(var(--spacing));
+  --spacing-small: calc(var(--spacing) * 2);
+  --spacing-large: calc(var(--spacing) * 3);
+  --spacing-xlarge: calc(var(--spacing) * 4);
 
-    --img-size: 250px;
+  --img-size: 250px;
 
-    --text-color: white;
+  --text-color: white;
   }
