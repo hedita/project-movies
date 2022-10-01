@@ -1,0 +1,52 @@
+.page-header {
+  text-align: center;
+  padding: var(--spacing-large);
+  font-weight: bold;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--img-size), 1fr));
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+.movie-item {
+  position: relative;
+}
+
+.movie-details {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--primary-hover-color); 
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.movie-name {
+  font-weight: bolder;
+  margin: var(--spacing-small);
+}
+
+.movie-release {
+  margin: var(--spacing-small);
+}
+
+.movie-details:hover {
+  opacity: 1;
+}
+
+
