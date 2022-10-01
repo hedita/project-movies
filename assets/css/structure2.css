@@ -1,0 +1,19 @@
+@import "./variables.css";
+
+body {
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+}
+
+.title {
+  color: var(--text-color);
+  margin: 0;
+}
+
+.img {
+  border: var(--border-image);
+}
+
+.img-section {
+  
+}
