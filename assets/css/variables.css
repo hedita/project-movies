@@ -6,9 +6,11 @@
   --spacing-large: calc(var(--spacing) * 3);
   --spacing-xlarge: calc(var(--spacing) * 4);
 
+  --border-image: 2px white solid;
+
   --img-size: 250px;
 
   --text-color: white;
 
   --primary-hover-color: rgba(0,0,0,0.5);
-  }
+}
