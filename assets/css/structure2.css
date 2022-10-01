@@ -1,9 +1,15 @@
 @import "./variables.css";
+@import "./reset.css";
 
 body {
   background-image: url(../img/background.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   color: var(--text-color);
+}
+
+.title {
+  font-size:x-large;
 }
 
 .img {
@@ -14,12 +20,28 @@ body {
 
 .movie-section {
   display: flex;  
+  flex-direction: row;
+  align-items: flex-end;
 }
 
 .movie-details {
   display: flex;
 }
 
+.summary {
+  margin-top: var(--spacing-small);
+}
+
 .rate {
   color: var(--secondery-text-color);
+  margin-left: var(--spacing);
+  align-self: center;
+}
+
+.movie-name {
+  font-size: x-large;
+}
+
+.details-container {
+  margin-left: var(--spacing-small);
 }
