@@ -6,12 +6,13 @@
   --spacing-large: calc(var(--spacing) * 3);
   --spacing-xlarge: calc(var(--spacing) * 4);
 
-  --border-image: 2px white solid;
+  --border-image: 2px rgb(255, 255, 255) solid;
 
   --img-size: 250px;
 
-  --text-color: white;
-  --secondery-text-color: red;
-
+  --text-color: rgb(255, 255, 255);
+  --secondery-text-color: rgb(255, 0, 0);
+  --primary-gradient-color: rgba(0, 0, 0, 0);
+  --secondery-gradient-color: rgb(0, 0, 0);
   --primary-hover-color: rgba(0,0,0,0.5);
 }
