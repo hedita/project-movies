@@ -2,10 +2,15 @@
 @import "./reset.css";
 
 body {
-  background-image: url(../img/background.jpg);
+  background-image: linear-gradient(
+    var(--primary-gradient-color),
+    var(--secondery-gradient-color)
+  ),
+  url(../img/background.jpg);
   background-size: cover;
   background-repeat: no-repeat; 
   color: var(--text-color);
+  min-height: 100vh;
 }
 
 .title {
