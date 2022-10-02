@@ -20,8 +20,6 @@ body {
 }
 
 .details {
-  display: flex;
-  align-items: flex-end;
   padding: var(--spacing-large);
 }
   
@@ -40,15 +38,16 @@ body {
 
 .movie-name {
   font-size: x-large;
+  display: inline;
 }
 
 .rate {
   color: var(--secondery-text-color);
   font-size: bold;
   padding-left: var(--spacing-small);
+  display: inline;
 }
 
 .summary {
-  display: block;
   padding-top: var(--spacing-large);
 }
