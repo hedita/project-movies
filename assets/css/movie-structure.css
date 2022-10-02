@@ -1,0 +1,48 @@
+@import "./variables.css";
+@import "./reset.css";
+
+body {
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; 
+  color: var(--text-color);
+}
+
+.title {
+  font-size: x-large;
+  position: absolute;
+  padding: var(--spacing-large);
+}
+
+.details {
+  display: flex;
+  align-items: flex-end;
+  padding: var(--spacing-large);
+}
+  
+.details-container {
+  display: flex;
+  align-items:flex-end;
+  min-height: 100vh;
+  padding: var(--spacing-large);
+}
+
+.img {
+  border: var(--border-image);
+  width: 300px;
+  height: 450px;
+}
+
+.movie-name {
+  font-size: x-large;
+}
+
+.rate {
+  color: var(--secondery-text-color);
+  font-size: bold;
+}
+
+.summary {
+  display: block;
+  padding-top: var(--spacing-large);
+}
