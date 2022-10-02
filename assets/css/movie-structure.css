@@ -23,7 +23,7 @@ body {
 .details-container {
   display: flex;
   align-items:flex-end;
-  min-height: 100vh;
+  min-height: 90vh;
   padding: var(--spacing-large);
 }
 
@@ -40,6 +40,7 @@ body {
 .rate {
   color: var(--secondery-text-color);
   font-size: bold;
+  padding-left: var(--spacing-small);
 }
 
 .summary {
