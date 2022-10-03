@@ -58,7 +58,12 @@ body {
 /* Mobile */
 @media(max-width: 600px) {
  
+  .title {
+    text-align: center;
+  }
+  
   .details-container {
     display: grid;
+    align-items: center;
   }   
 }
