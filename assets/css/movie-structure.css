@@ -1,3 +1,6 @@
+@import "./reset.css";
+@import "./variables.css";
+
 body {
   font-family: var(--primary-font);
   background-image: linear-gradient(
