@@ -1,7 +1,5 @@
-@import "./variables.css";
-@import "./reset.css";
-
 body {
+  font-family: var(--primary-font);
   background-image: linear-gradient(
     var(--primary-gradient-color),
     var(--secondery-gradient-color)
@@ -14,7 +12,7 @@ body {
 }
 
 .title {
-  font-size: x-large;
+  font-size: var(--primary-font-size);
   position: absolute;
   padding: var(--spacing-large);
 }
@@ -37,17 +35,27 @@ body {
 }
 
 .movie-name {
-  font-size: x-large;
+  font-size: var(--primary-font-size);
   display: inline;
 }
 
 .rate {
   color: var(--secondery-text-color);
-  font-size: bold;
+  font-size: var(--primary-font-size);
   padding-left: var(--spacing-small);
   display: inline;
 }
 
 .summary {
+  font-size: var(--secondery-font-size);
   padding-top: var(--spacing-large);
+  padding-left: var(--spacing-small);
+}
+
+/* Mobile */
+@media(max-width: 600px) {
+ 
+  .details-container {
+    display: grid;
+  }   
 }
