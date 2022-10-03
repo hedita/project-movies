@@ -1,7 +1,11 @@
+body {
+  font-family: var(--primary-font);
+}
+
 .page-header {
   text-align: center;
   padding: var(--spacing-large);
-  font-weight: bold;
+  font-size: var(--primary-font-size);
 }
 
 .movie-list {
@@ -37,16 +41,15 @@
 }
 
 .movie-name {
-  font-weight: bolder;
+  font-size: var(--secondery-font-size);
   margin: var(--spacing-small);
 }
 
 .movie-release {
   margin: var(--spacing-small);
+  font-size: var(--secondery-font-size);
 }
 
 .movie-details:hover {
   opacity: 1;
 }
-
-
