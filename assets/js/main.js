@@ -4,7 +4,7 @@ async function getMovies() {
   const {results: movies} = resultJson;
   const movieList = document.getElementById("movie-list");
   const imgSrc = "./assets/test.jpg";
-  listHtml = "";
+  let listHtml = "";
 
   movies.forEach(movie => {
     listHtml += `<li class="movie-item">
