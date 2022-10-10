@@ -1,14 +1,12 @@
 async function getMovies() {
   const result = await fetch("http://localhost:8080/");
   const resultJson = await result.json();
-  const {results} = resultJson;
+  const {results: movies} = resultJson;
   const movieList = document.getElementById("movie-list");
   const imgSrc = "./assets/test.jpg";
   listHtml = "";
 
-  results.forEach(movie => {
-    const movieTitle = resultJson.results[0].title;
-    const movieReleaseDate = resultJson.results[0].release_date;
+  movies.forEach(movie => {
     listHtml += `<li class="movie-item">
     <a href="./movie.html">
       <img id="img" class="img" src=${imgSrc}>
@@ -17,8 +15,7 @@ async function getMovies() {
         <p id="movie-release" class="movie-release">${movie.release_date}</p>
       </section>
     </a>
-  </li>`
-  console.log(movie.title)
+  </li>`;
   });
   movieList.innerHTML = listHtml;
 }
