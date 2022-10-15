@@ -7,8 +7,8 @@ async function getMovies() {
   let listHtml = "";
 
   movies.forEach(movie => {
-    listHtml += `<li class="movie-item">
-    <a href="./movie.html">
+    listHtml += `<li id="movie-item" class="movie-item">
+    <a id="movie-link" href="./movie.html">
       <img id="img" class="img" src=${imgSrc}>
       <section class="movie-details">
         <h2 id="movie-name" class="movie-name">${movie.title}</h2>
@@ -21,3 +21,7 @@ async function getMovies() {
 }
 
 getMovies();
+
+movie.addEventListener("click", function() {
+
+});
