@@ -2,7 +2,6 @@ async function getMovies() {
   const result = await fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=9f120f0e95e5cedf05a78abda9ef8477&language=en-US&page=1");
   const resultJson = await result.json();
   const {results: movies} = resultJson;
-  console.log(resultJson)
   const movieList = document.getElementById("movie-list");
   const imgSrc = "./assets/test.jpg";
   let listHtml = "";
