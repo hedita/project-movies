@@ -3,7 +3,6 @@ async function getMovies() {
   const resultJson = await result.json();
   const {results: movies} = resultJson;
   const movieList = document.getElementById("movie-list");
-  const imgSrc = "./assets/test.jpg";
   let listHtml = "";
 
   movies.forEach(movie => {
