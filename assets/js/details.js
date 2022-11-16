@@ -5,8 +5,6 @@
   async function getMovieDetails () {
    const result = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`);
    const resultJson = await result.json();
-   const {results: movie} = resultJson;
-   console.log(resultJson);
 
    const movieName = document.getElementById("movie-name");
    const movieImg = document.getElementById("movie-img");
@@ -18,17 +16,13 @@
       var(--primary-gradient-color),
       var(--secondery-gradient-color)),
       url("https://image.tmdb.org/t/p/w342/${resultJson.poster_path}");`
-   
-   listHtml = "";
 
-   listHtml += `<img id="movie-img" class="img" src="https://image.tmdb.org/t/p/w342/${resultJson.backdrop_path}" />
+  detailsContainer.innerHTML = `<img id="movie-img" class="img" src="https://image.tmdb.org/t/p/w342/${resultJson.poster_path}" />
    <figcaption class="details">
      <h2 id="movie-name" class="movie-name"${resultJson.title}></h2>
      <p id="rate" class="rate">${resultJson.vote_average}</p>
      <p id="over-view" class="summary">${resultJson.overview}</p>
    </figcaption>` 
-
-   detailsContainer.innerHTML = listHtml;
 }
 
 getMovieDetails();
