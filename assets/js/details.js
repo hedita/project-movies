@@ -21,7 +21,7 @@
    
    listHtml = "";
 
-   listHtml += ` <img id="movie-img" class="img" src="https://image.tmdb.org/t/p/w342/${resultJson.backdrop_path}" />
+   listHtml += `<img id="movie-img" class="img" src="https://image.tmdb.org/t/p/w342/${resultJson.backdrop_path}" />
    <figcaption class="details">
      <h2 id="movie-name" class="movie-name"${resultJson.title}></h2>
      <p id="rate" class="rate">${resultJson.vote_average}</p>
