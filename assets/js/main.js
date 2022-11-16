@@ -10,7 +10,7 @@ async function getMovies() {
   movies.forEach(movie => {
     listHtml += `<li id="movie-item" class="movie-item">
     <a id="movie-link" href="./movie.html?id=${movie.id}">
-      <img id="img" class="img" src=${imgSrc}>
+      <img id="img" class="img" src="https://image.tmdb.org/t/p/w342/${movie.poster_path}" />
       <section class="movie-details">
         <h2 id="movie-name" class="movie-name">${movie.title}</h2>
         <p id="movie-release" class="movie-release">${movie.release_date}</p>
