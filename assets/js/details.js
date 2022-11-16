@@ -13,10 +13,15 @@
    const movieRate = document.getElementById("rate");
    const movieOverView = document.getElementById("over-view");
    const detailsContainer = document.getElementById("details-container");
+
+   document.body.style = ` background-image: linear-gradient(
+      var(--primary-gradient-color),
+      var(--secondery-gradient-color)),
+      url("https://image.tmdb.org/t/p/w342/${resultJson.poster_path}");`
    
    listHtml = "";
 
-   listHtml += ` <img id="movie-img" class="img" src="https://image.tmdb.org/t/p/w342/${resultJson.backdrop_path}" / >
+   listHtml += ` <img id="movie-img" class="img" src="https://image.tmdb.org/t/p/w342/${resultJson.backdrop_path}" />
    <figcaption class="details">
      <h2 id="movie-name" class="movie-name"${resultJson.title}></h2>
      <p id="rate" class="rate">${resultJson.vote_average}</p>
