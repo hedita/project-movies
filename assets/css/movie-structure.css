@@ -53,6 +53,7 @@ body {
   font-size: var(--secondery-font-size);
   padding-top: var(--spacing-large);
   padding-left: var(--spacing-small);
+  line-height: var(--spacing-large);
 }
 
 /* Mobile */
