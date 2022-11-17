@@ -4,7 +4,7 @@
   
   async function getMovieDetails () {
    const result = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`);
-   const resultJson = await result.json();
+   const movie = await result.json();
 
    const movieName = document.getElementById("movie-name");
    const movieImg = document.getElementById("movie-img");
@@ -15,13 +15,13 @@
    document.body.style = ` background-image: linear-gradient(
       var(--primary-gradient-color),
       var(--secondery-gradient-color)),
-      url("https://image.tmdb.org/t/p/w342/${resultJson.poster_path}");`
+      url("https://image.tmdb.org/t/p/w342/${movie.poster_path}");`
 
-  detailsContainer.innerHTML = `<img id="movie-img" class="img" src="https://image.tmdb.org/t/p/w342/${resultJson.poster_path}" />
+  detailsContainer.innerHTML = `<img id="movie-img" class="img" src="https://image.tmdb.org/t/p/w342/${movie.poster_path}" />
    <figcaption class="details">
-     <h2 id="movie-name" class="movie-name"${resultJson.title}></h2>
-     <p id="rate" class="rate">${resultJson.vote_average}</p>
-     <p id="over-view" class="summary">${resultJson.overview}</p>
+     <h2 id="movie-name" class="movie-name"${movie.title}></h2>
+     <p id="rate" class="rate">${movie.vote_average}</p>
+     <p id="over-view" class="summary">${movie.overview}</p>
    </figcaption>` 
 }
 
