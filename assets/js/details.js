@@ -5,14 +5,14 @@
   
   async function getMovieDetails () {
    const result = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`);
-   const {poster_path, title, vote_average, overview} = await result.json();
+   const {poster_path: img, title, vote_average, overview} = await result.json();
 
    document.body.style = ` background-image: linear-gradient(
       var(--primary-gradient-color),
       var(--secondery-gradient-color)),
-      url("https://image.tmdb.org/t/p/w342/${poster_path}");`
+      url("https://image.tmdb.org/t/p/w342/${img}");`
 
-  detailsContainer.innerHTML = `<img id="movie-img" class="img" src="https://image.tmdb.org/t/p/w342/${poster_path}" />
+  detailsContainer.innerHTML = `<img id="movie-img" class="img" src="https://image.tmdb.org/t/p/w342/${img}" />
    <figcaption class="details">
      <h2 id="movie-name" class="movie-name"${title}></h2>
      <p id="rate" class="rate">${vote_average}</p>
