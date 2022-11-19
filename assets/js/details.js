@@ -14,7 +14,7 @@
 
   detailsContainer.innerHTML = `<img id="movie-img" class="img" src="https://image.tmdb.org/t/p/w342/${posterPath}" />
    <figcaption class="details">
-     <h2 id="movie-name" class="movie-name"${title}></h2>
+     <h2 id="movie-name" class="movie-name">${title}</h2>
      <p id="rate" class="rate">${voteAverage}</p>
      <p id="over-view" class="summary">${overview}</p>
    </figcaption>` 
