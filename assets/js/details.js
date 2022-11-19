@@ -5,7 +5,7 @@
   
   async function getMovieDetails () {
    const result = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`);
-   const {poster_path: posterPath, title, voteAverage, overview} = await result.json();
+   const {poster_path: posterPath, title, vote_average: voteAverage, overview} = await result.json();
 
    document.body.style = ` background-image: linear-gradient(
       var(--primary-gradient-color),
