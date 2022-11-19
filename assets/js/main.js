@@ -7,13 +7,13 @@ async function getMovies() {
   const movieList = document.getElementById("movie-list");
   let listHtml = "";
 
-  movies.forEach(({id,poster_path: img,title,release_date}) => {
+  movies.forEach(({id, poster_path: posterPath, title, releaseDate}) => {
     listHtml += `<li class="movie-item">
     <a href="./movie.html?id=${id}">
-      <img class="img" src="https://image.tmdb.org/t/p/w342/${img}" />
+      <img class="img" src="https://image.tmdb.org/t/p/w342/${posterPath}" />
       <section class="movie-details">
         <h2 class="movie-name">${title}</h2>
-        <p class="movie-release">${release_date}</p>
+        <p class="movie-release">${releaseDate}</p>
       </section>
     </a>
   </li>`;
