@@ -1,23 +1,24 @@
+const apiKey = "9f120f0e95e5cedf05a78abda9ef8477";
+
 async function getMovies() {
-  const result = await fetch("http://localhost:8080/");
+  const result = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`);
   const resultJson = await result.json();
   const {results: movies} = resultJson;
   const movieList = document.getElementById("movie-list");
-  const imgSrc = "./assets/test.jpg";
   let listHtml = "";
 
-  movies.forEach(movie => {
+  movies.forEach(({id, poster_path: posterPath, title, release_date: releaseDate}) => {
     listHtml += `<li class="movie-item">
-    <a href="./movie.html">
-      <img id="img" class="img" src=${imgSrc}>
+    <a href="./movie.html?id=${id}">
+      <img class="img" src="https://image.tmdb.org/t/p/w342/${posterPath}" />
       <section class="movie-details">
-        <h2 id="movie-name" class="movie-name">${movie.title}</h2>
-        <p id="movie-release" class="movie-release">${movie.release_date}</p>
+        <h2 class="movie-name">${title}</h2>
+        <p class="movie-release">${releaseDate}</p>
       </section>
     </a>
   </li>`;
   });
   movieList.innerHTML = listHtml;
-}
 
+}
 getMovies();
